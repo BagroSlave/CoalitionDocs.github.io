@@ -1,4 +1,6 @@
+const tilecopyButtons = document.querySelectorAll('.tile-copy-button')
 const copyButtons = document.querySelectorAll('.copy-button')
+const copyText = document.querySelectorAll('.copy-text')
 
 async function copyFunction(e) {
     e.preventDefault()
@@ -14,8 +16,12 @@ async function copyFunction(e) {
     }
 }
 
+copyText.forEach(copyText =>
+    copyText.addEventListener('click', copyFunction))
 copyButtons.forEach(copyButtons =>
     copyButtons.addEventListener('click', copyFunction))
+tilecopyButtons.forEach(tilecopyButton =>
+    tilecopyButton.addEventListener('click', copyFunction))
 
 function popup(message, linkText, linkURL, popuptime) {
     const notificationBar = document.querySelector('.notification-bar');
