@@ -204,6 +204,7 @@ narrow {
     align-items: center;
     justify-content: space-between;
     color: var(--color, white);
+    text-decoration: none;
 }
 
 .mobile .tile {
